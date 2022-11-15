@@ -6,25 +6,26 @@ public class App {
         while (run) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Please select an option.");
-            System.out.println("1 for GPA, 2 for letter grade, 3 to exit");
+            System.out.println("1 for GPA, 2 for letter grade, 'stop' to exit");
             //scanner looks for the menu choice
             String mainMenuInput = scanner.nextLine();
+            
+            System.out.println("Please input grade...");
+            int grade = scanner.nextInt();
+            
             switch (mainMenuInput) {
                 case "1":
-                    System.out.println("Please input grade...");
-                    int grade1 = scanner.nextInt();
-                    System.out.println(calculate(grade1, "gpa"));
+                    System.out.println(calculate(grade, "gpa"));
                     break;
                 case "2":
-                    System.out.println("Please input grade...");
-                    int grade2 = scanner.nextInt();
-                    System.out.println(calculate(grade2, "letter"));
+                    System.out.println(calculate(grade, "letter"));
                     break;
-                case "3":
+                case "stop":
                     run = false;
                     scanner.close();
                     break;
                 default:
+                    System.out.println("Invalid input.");
                     break;
             }
         }
