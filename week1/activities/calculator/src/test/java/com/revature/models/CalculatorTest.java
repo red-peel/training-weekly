@@ -1,7 +1,7 @@
 package com.revature.models;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+// import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
@@ -61,4 +61,13 @@ public class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+    //TODO implement assertthrows to throw whem divide by zero
+    // @Test
+    // void divideByZeroShouldThrowException(){
+    //     Calculator testCalculator = new Calculator();
+    //     double x = 1;
+    //     double y = 0;
+
+    //     assertThrows(run, testCalculator.divide(x,y));
+    // }
 }
